@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="styles.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	<!-- includes google jQuery file -->
+		<title>Page Title</title>
+	</head>
+	<body id="body">
+		<h1>My First Heading</h1>
+		<p>My first paragraph.</p>
+	
+		<div id="myBtnContainer">
+		  <button class="btn active" onclick="filterSelection('all')">Show all</button>
+		  <button class="btn" onclick="filterSelection('Streets')">Streets</button>
+		  <button class="btn" onclick="filterSelection('Nature')">Nature</button>
+		  <button class="btn" onclick="filterSelection('Abstract')">Abstract</button>
+		  <button class="btn" onclick="filterSelection('Horizon')">Horizon</button>
+		  <button class="btn" onclick="filterSelection('Animals')">Animals</button>
+		  <button class="btn" onclick="filterSelection('People')">People</button>
+		  <button class="btn" onclick="filterSelection('Flowers')">Flowers</button>
+		  <button class="btn" onclick="filterSelection('Cities')">Cities</button>
+		  <button class="btn" onclick="filterSelection('Trees')">Trees</button>
+		  <button class="btn" onclick="filterSelection('Clouds')">Clouds</button>
+		  <button class="btn" onclick="filterSelection('Interior')">Interior</button>
+		</div>
+				
+		<div class="grid" id="grid"> 
+			<img class = "show img Streets" id="myImg1" src="1.jpg" title="Painting 1">
+			<img class = "show img Nature" id="myImg2" src="2.jpg" title="Painting 2">
+			<img class = "show img Abstract" id="myImg3" src="3.jpg" title="Painting 3">
+			<img class = "show img Abstract" id="myImg4" src="4.jpg" title="Painting 4">
+			<img class = "show img Horizon" id="myImg5" src="5.jpg" title="Painting 5">
+			<img class = "show img Animals" id="myImg6" src="6.jpg" title="Painting 6">
+			<img class = "show img Abstract" id="myImg7" src="7.jpg" title="Painting 7">
+			<img class = "show img Abstract" id="myImg8" src="8.jpg" title="Painting 8">
+			<img class = "show img People" id="myImg9" src="9.jpg" title="Painting 9">
+			<img class = "show img Abstract" id="myImg10" src="10.jpg" title="Painting 10">
+			<img class = "show img Flowers" id="myImg11" src="11.jpg" title="Painting 11">
+			<img class = "show img Cities" id="myImg12" src="12.jpg" title="Painting 12">
+			<img class = "show img Cities" id="myImg13" src="13.jpg" title="Painting 13">
+			<img class = "show img People" id="myImg14" src="14.jpg" title="Painting 14">
+			<img class = "show img People" id="myImg15" src="15.jpg" title="Painting 15">
+			<img class = "show img Trees" id="myImg16" src="16.jpg" title="Painting 16">
+			<img class = "show img Clouds" id="myImg17" src="17.jpg" title="Painting 17">	
+			<img class = "show img Clouds" id="myImg18" src="18.jpg" title="Painting 18">
+			<img class = "show img Animals" id="myImg19" src="19.jpg" title="Painting 19">
+			<img class = "show img Interior" id="myImg20" src="20.jpg" title="Painting 20">
+			<img class = "show img People" id="myImg21" src="21.jpg" title="Painting 21">
+			<img class = "show img Animals" id="myImg22" src="22.jpg" title="Painting 22">
+			<img class = "show img People" id="myImg23" src="23.jpg" title="Painting 23">
+			<img class = "show img Nature" id="myImg24" src="24.jpg" title="Painting 24">	
+			<img class = "show img People" id="myImg25" src="25.jpg" title="Painting 25">
+		</div>
+		
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+
+		  <!-- The Close Button -->
+		  <span class="close">&times;</span>	/*X-Sign*/
+
+		  <!-- Modal Content (The Image) -->
+		  <img class="modal-content" id="modalImg">
+
+		  <!-- Modal Caption (Image Text) -->
+		  <div id="caption"></div>
+		</div>		
+		
+		<div class="social-media">
+			<a href="mailto:olympiahaacht@hotmail.com">
+			<img class="fblogo" border="0" alt="Mail" src="http://olympiahaacht.be/wp-content/uploads/2012/04/FacebookButtonRevised-e1334605872360.jpg"/></a>
+			<a href="https://www.facebook.com/OlympiaHaacht" target="_blank">
+			<img class="fblogo" border="0" alt="Facebook" src="http://olympiahaacht.be/wp-content/uploads/2012/04/FacebookButtonRevised-e1334605872360.jpg"/></a>
+		</div>
+		
+		<p>My last paragraph.</p>
+		<p id="test"></p>
+		<script src="myscripts.js"></script>
+	</body>
+</html>
