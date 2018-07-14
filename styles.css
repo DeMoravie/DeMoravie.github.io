@@ -149,8 +149,8 @@ p
 .modal-content {
     margin: auto;
     display: block;
-	height:100%;
-    width: auto;
+	height:auto;
+    width: 90vw;
     max-width: 700px;
 }
 
