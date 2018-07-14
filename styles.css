@@ -34,9 +34,9 @@ p
 
 #myBtnContainer {
 	text-align:center;
-	max-width: 75%;
-	margin-left: auto;	
-	margin-right: auto;	
+	max-width: 80vw;
+	margin-left: 6vw;	
+	margin-right: 14vw;	
 	padding-left: calc(100vw - 100%);	/*necessary to prevent element from shifting left when scrollbar appears*/
 	/*The trick is that 100vw represents 100% of the viewport including the scrollbar. If you subtract 100%, which is the available space without the scrollbar, you end up with the width of the scrollbar or 0 if it is not present. Creating a padding of that width on the left will simulate a second scrollbar, shifting centered content back to the right. Please note that this will only work if the scrollable element uses the page's entire width, but this should be no problem most of the time because there are only few other cases where you have centered scrollable content.*/
 }	
@@ -65,7 +65,7 @@ p
 }
 
 /* Create four equal columns that sits next to each other */
-.grid {
+/*.grid {
 	margin-top: 8px;
 	max-width: 60vw;
 }
@@ -75,15 +75,22 @@ p
 	height: 100%;
 	max-width: 30vw;
 	min-width: 30vw;
+}*/
+
+/*@media screen and (max-width: 800px) {
+.grid {
+    column-count: 1;
+    column-gap: 12px;
+  }
 }
 
-/* The "show" class is added to the filtered elements*/
+/* The "show" class is added to the filtered elements
 .show {
 	height: 100%;
 	max-width: 30vw;
 	min-width: 30vw;
 	padding-left: 12px;	
-}	
+}	*/
 
 .hide{
 	display: none;	

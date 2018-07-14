@@ -246,47 +246,149 @@ function numberOfImg(name) {
  var txt1 = "#grid .";
  var txt = txt1+name;
  var numberOfImg = document.querySelectorAll(txt).length;
- document.getElementById("test").innerHTML = numberOfImg;
+ //document.getElementById("test").innerHTML = numberOfImg;
+ checkWidth(numberOfImg);
  if (x.matches) { // If media query matches
 		//document.getElementById("grid").style.display="block";
+		//document.getElementById("grid").style.marginLeft="20vw";
 		//document.getElementById("grid").style.columnCount=1;
+		//document.getElementById("grid").style.marginRight="20vw";
+		//document.getElementById("grid").style.minWidth="100vw";
 		//document.getElementById("grid").style.columnGap="0px";
-	} else {
-	 if (numberOfImg == 1) {
-		document.getElementById("grid").style.display="block";
-		document.getElementById("grid").style.columnCount=1;
-		document.getElementById("grid").style.columnGap="0px";
-		document.getElementById("grid").style.maxWidth="30vw";
-		document.getElementById("grid").style.marginLeft="35vw";
-	  }
-	 if (numberOfImg == 2) {
-		document.getElementById("grid").style.columnCount=1;
-		document.getElementById("grid").style.columnGap="0px";
-		document.getElementById("grid").style.display="flex";
-		document.getElementById("grid").style.maxWidth="60vw";
-		document.getElementById("grid").style.marginLeft="20vw";
+		//document.getElementById("test").innerHTML = "f1";
+	} //else {
+ if($(window).width() >= 800){
 		
-	  }
-	 if (numberOfImg == 3) {
-		document.getElementById("grid").style.columnCount=1;
-		document.getElementById("grid").style.columnGap="0px";
-		document.getElementById("grid").style.display="flex";
-		document.getElementById("grid").style.justifyContent="space-around";
-		document.getElementById("grid").style.maxWidth="60vw";
-		document.getElementById("grid").style.marginLeft="20vw";
-		
-	  }
-	 if (numberOfImg > 3) {
-		document.getElementById("grid").style.display="block";
-		document.getElementById("grid").style.columnGap="0px";
-		document.getElementById("grid").style.columnCount=2;
-		document.getElementById("grid").style.maxWidth="60vw";
-		document.getElementById("grid").style.marginLeft="20vw";
-	  }
  }
 }
 
-var x = window.matchMedia("(max-width: 700px)")
+var x = window.matchMedia("(max-width: 800px)")
 //myFunction(x) // Call listener function at run time
 //x.addListener(numberOfImg()) // Attach listener function on state changes
 document.getElementById("body").onload = function() {numberOfImg("img")};
+
+$(document).ready(function(){
+	var txt1 = "#grid .";
+	var name = "img";
+	var txt = txt1+name;
+	var numberOfImg = document.querySelectorAll(txt).length;
+	checkWidth(numberOfImg);
+	//$(window).resize(checkWidth(numberOfImg));
+})
+
+$( window ).resize(function() {
+	var txt1 = "#grid .";
+	var name = "show";
+	var txt = txt1+name;
+	var numberOfImg = document.querySelectorAll(txt).length;
+	checkWidth(numberOfImg);	
+});
+
+
+
+function checkWidth(numberOfImg){
+		var windowSize = $(window).width();
+		
+		if(windowSize < 800){
+			//alert("smaller than 800px");
+			//document.getElementById("grid").style.maxWidth="90vw";
+			//document.getElementById("grid").style.minWidth="90vw";
+			document.getElementById("grid").style.display="block";
+			document.getElementById("grid").style.marginTop="8px";
+			document.getElementById("grid").style.columnCount=1;
+			document.getElementById("grid").style.columnGap="8px";
+			document.getElementById("grid").style.marginLeft="0vw";
+			document.getElementById("grid").style.marginRight="10vw";
+			document.getElementById("grid").style.maxWidth="100vw";
+			var bilder = document.getElementsByClassName("img");
+			for(var i=0, j=bilder.length;i<j;i++)
+			{
+				bilder[i].style.marginTop="8px";
+				bilder[i].style.maxWidth="90vw";
+				//bilder[i].style.minWidth="90vw";
+				//bilder[i].style.minWidth="100vw";
+				bilder[i].style.marginLeft="5vw";
+				bilder[i].style.marginRight="5vw";
+				bilder[i].style.height="100%";
+				//bilder[i].style.justifyContent="center"
+			}
+		}
+		if(windowSize >= 800){
+			//alert("bigger than 800px");
+			//document.getElementById("test").innerHTML = "f2";		
+			 if (numberOfImg == 1) {
+				document.getElementById("grid").style.display="block";
+				document.getElementById("grid").style.marginTop="8px";
+				document.getElementById("grid").style.columnCount=1;
+				document.getElementById("grid").style.columnGap="8px";
+				document.getElementById("grid").style.marginLeft="31vw";
+				document.getElementById("grid").style.marginRight="39vw";
+				document.getElementById("grid").style.maxWidth="30vw";
+				var bilder = document.getElementsByClassName("img");
+				for(var i=0, j=bilder.length;i<j;i++)
+				{
+					bilder[i].style.marginTop="8px";
+					bilder[i].style.maxWidth="30vw";
+					bilder[i].style.marginLeft="8px";
+					bilder[i].style.height="100%";
+				}
+			  }
+			 if (numberOfImg == 2) {
+				document.getElementById("grid").style.display="flex";
+				document.getElementById("grid").style.marginTop="8px";
+				document.getElementById("grid").style.columnCount=1;
+				document.getElementById("grid").style.columnGap="8px";
+				document.getElementById("grid").style.marginLeft="16vw";
+				document.getElementById("grid").style.marginRight="24vw";
+				document.getElementById("grid").style.maxWidth="60vw";
+				var bilder = document.getElementsByClassName("img");
+				for(var i=0, j=bilder.length;i<j;i++)
+				{
+					bilder[i].style.marginTop="8px";
+					bilder[i].style.maxWidth="30vw";
+					bilder[i].style.marginLeft="8px";
+					bilder[i].style.height="100%";
+					bilder[i].style.marginRight="0vw";
+				}
+			  }
+			 if (numberOfImg == 3) {
+				document.getElementById("grid").style.display="flex";
+				document.getElementById("grid").style.marginTop="8px";
+				document.getElementById("grid").style.columnCount=1;
+				document.getElementById("grid").style.columnGap="8px";
+				document.getElementById("grid").style.marginLeft="3vw";
+				document.getElementById("grid").style.maxWidth="90vw";
+				document.getElementById("grid").style.minWidth="90vw";
+				var bilder = document.getElementsByClassName("img");
+				for(var i=0, j=bilder.length;i<j;i++)
+				{
+					bilder[i].style.marginTop="8px";
+					bilder[i].style.maxWidth="30vw";
+					bilder[i].style.marginLeft="8px";
+					bilder[i].style.height="100%";
+					bilder[i].style.marginRight="0vw";
+				}
+			  }
+			 if (numberOfImg > 3) {
+				document.getElementById("grid").style.display="block";
+				document.getElementById("grid").style.marginTop="8px";
+				document.getElementById("grid").style.columnCount=2;
+				document.getElementById("grid").style.marginLeft="16vw";
+				document.getElementById("grid").style.marginRight="24vw";
+				document.getElementById("grid").style.maxWidth="60vw";
+				document.getElementById("grid").style.minWidth="60vw";
+				document.getElementById("grid").style.columnGap="8px";
+				var bilder = document.getElementsByClassName("img");
+				for(var i=0, j=bilder.length;i<j;i++)
+				{
+					bilder[i].style.marginTop="8px";
+					bilder[i].style.maxWidth="30vw";
+					bilder[i].style.marginLeft="8px";
+					bilder[i].style.height="100%";
+				}
+			  }
+		}
+	}
+
+//$(window).resize(checkWidth);
+//document.getElementById("body").onload = function() {checkWidth()};
