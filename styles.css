@@ -64,40 +64,12 @@ p
 	color: white;
 }
 
-/* Create four equal columns that sits next to each other */
-/*.grid {
-	margin-top: 8px;
-	max-width: 60vw;
-}
-
-.grid img {
-	margin-bottom: 8px;
-	height: 100%;
-	max-width: 30vw;
-	min-width: 30vw;
-}*/
-
-/*@media screen and (max-width: 800px) {
-.grid {
-    column-count: 1;
-    column-gap: 12px;
-  }
-}
-
-/* The "show" class is added to the filtered elements
-.show {
-	height: 100%;
-	max-width: 30vw;
-	min-width: 30vw;
-	padding-left: 12px;	
-}	*/
-
 .hide{
 	display: none;	
 }
 
 /* Style the Image Used to Trigger the Modal */
-#myImg1,#myImg2, #myImg3, #myImg4, #myImg5, #myImg6, #myImg7, #myImg8, #myImg9, #myImg10, #myImg11, #myImg12, #myImg13, #myImg14, #myImg15, #myImg16, #myImg17, #myImg18, #myImg19, #myImg20, #myImg21, #myImg22, #myImg23, #myImg24, #myImg25 {
+#myImg1,#myImg2, #myImg3, #myImg4, #myImg5, #myImg6, #myImg7, #myImg8, #myImg9, #myImg10, #myImg11, #myImg12, #myImg13, #myImg14, #myImg15, #myImg16, #myImg17, #myImg18, #myImg19, #myImg20, #myImg21, #myImg22, #myImg23, #myImg24, #myImg25, #myImg26, #myImg27, #myImg28, #myImg29, #myImg30, #myImg31, #myImg32, #myImg33, #myImg34, #myImg35, #myImg36, #myImg37, #myImg38, #myImg39, #myImg40, #myImg41, #myImg42, #myImg43, #myImg44, #myImg45, #myImg46, #myImg47, #myImg48, #myImg49, #myImg50, #myImg51, #myImg52, #myImg53, #myImg54, #myImg55, #myImg56, #myImg57, #myImg58, #myImg59, #myImg60, #myImg61, #myImg62, #myImg63 {
     cursor: pointer;
     transition: 0.3s;
 	-webkit-transform: translateZ(0);	/* necessary to fix transition-opacity-blinking-glitch when hovering over images */
@@ -129,6 +101,44 @@ p
 #myImg23:hover {opacity: 0.7;}
 #myImg24:hover {opacity: 0.7;}
 #myImg25:hover {opacity: 0.7;}
+#myImg26:hover {opacity: 0.7;}
+#myImg27:hover {opacity: 0.7;}
+#myImg28:hover {opacity: 0.7;}
+#myImg29:hover {opacity: 0.7;}
+#myImg30:hover {opacity: 0.7;}
+#myImg31:hover {opacity: 0.7;}
+#myImg32:hover {opacity: 0.7;}
+#myImg33:hover {opacity: 0.7;}
+#myImg34:hover {opacity: 0.7;}
+#myImg35:hover {opacity: 0.7;}
+#myImg36:hover {opacity: 0.7;}
+#myImg37:hover {opacity: 0.7;}
+#myImg38:hover {opacity: 0.7;}
+#myImg39:hover {opacity: 0.7;}
+#myImg40:hover {opacity: 0.7;}
+#myImg41:hover {opacity: 0.7;}
+#myImg42:hover {opacity: 0.7;}
+#myImg43:hover {opacity: 0.7;}
+#myImg44:hover {opacity: 0.7;}
+#myImg45:hover {opacity: 0.7;}
+#myImg46:hover {opacity: 0.7;}
+#myImg47:hover {opacity: 0.7;}
+#myImg48:hover {opacity: 0.7;}
+#myImg49:hover {opacity: 0.7;}
+#myImg50:hover {opacity: 0.7;}
+#myImg51:hover {opacity: 0.7;}
+#myImg52:hover {opacity: 0.7;}
+#myImg53:hover {opacity: 0.7;}
+#myImg54:hover {opacity: 0.7;}
+#myImg55:hover {opacity: 0.7;}
+#myImg56:hover {opacity: 0.7;}
+#myImg57:hover {opacity: 0.7;}
+#myImg58:hover {opacity: 0.7;}
+#myImg59:hover {opacity: 0.7;}
+#myImg60:hover {opacity: 0.7;}
+#myImg61:hover {opacity: 0.7;}
+#myImg62:hover {opacity: 0.7;}
+#myImg63:hover {opacity: 0.7;}
 
 /* The Modal (background) */
 .modal {
@@ -140,7 +150,7 @@ p
     top: 0px;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    overflow: hidden; /* Hides background scrollbar */
+	overflow: scroll;
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
@@ -148,10 +158,9 @@ p
 /* Modal Content (Image) */
 .modal-content {
     margin: auto;
+	margin-top: 50px;
     display: block;
-	height:auto;
-    width: 90vw;
-    max-width: 700px;
+	width: 90vw;
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
@@ -163,7 +172,7 @@ p
     text-align: center;
     color: #ccc;
     padding: 10px 0;
-    height: 150px;
+    height: 150px;	
 }
 
 /* Add Animation - Zoom in the Modal */
@@ -188,8 +197,7 @@ p
     transition: 0.3s;
 }
 
-.close:hover,
-.close:focus {
+.close:hover, .close:focus {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
