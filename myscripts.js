@@ -73,8 +73,14 @@ img1.onclick = function(){
     modal.style.display = "block";
     modalImg.src = this.src;
     captionText.innerHTML = this.title;
-	$("html").css({"overflow":"hidden"});
+	$("html").css({"overflow-y":"hidden"});
+	//$("#modalHeader").css({"display":"show"});
 }
+
+	/*$('.modal').scroll(function() {
+     var a=$('.modal').scrollTop();
+     $('.modalHeader').css('top',a+'px');
+	});*/
 
 img2.onclick = function(){
     modal.style.display = "block";
@@ -614,15 +620,13 @@ $(document).ready(function(){
 	//$(window).resize(checkWidth(numberOfImg));
 })
 
-$( window ).resize(function() {
+$(window).resize(function() {
 	var txt1 = "#grid .";
 	var name = "show";
 	var txt = txt1+name;
 	var numberOfImg = document.querySelectorAll(txt).length;
 	checkWidth(numberOfImg);	
 });
-
-
 
 function checkWidth(numberOfImg){
 		var windowSize = $(window).width();
@@ -667,7 +671,7 @@ function checkWidth(numberOfImg){
 				{
 					bilder[i].style.marginTop="8px";
 					bilder[i].style.maxWidth="30vw";
-					bilder[i].style.marginLeft="8px";
+					bilder[i].style.marginLeft="4vw";
 					bilder[i].style.height="100%";
 				}
 			  }
@@ -676,7 +680,7 @@ function checkWidth(numberOfImg){
 				document.getElementById("grid").style.marginTop="8px";
 				document.getElementById("grid").style.columnCount=1;
 				document.getElementById("grid").style.columnGap="8px";
-				document.getElementById("grid").style.marginLeft="16vw";
+				document.getElementById("grid").style.marginLeft="19vw";
 				document.getElementById("grid").style.marginRight="24vw";
 				document.getElementById("grid").style.maxWidth="60vw";
 				var bilder = document.getElementsByClassName("img");
@@ -711,7 +715,7 @@ function checkWidth(numberOfImg){
 				document.getElementById("grid").style.display="block";
 				document.getElementById("grid").style.marginTop="8px";
 				document.getElementById("grid").style.columnCount=2;
-				document.getElementById("grid").style.marginLeft="16vw";
+				document.getElementById("grid").style.marginLeft="15vw";
 				document.getElementById("grid").style.marginRight="24vw";
 				document.getElementById("grid").style.maxWidth="60vw";
 				document.getElementById("grid").style.minWidth="60vw";
@@ -721,12 +725,30 @@ function checkWidth(numberOfImg){
 				{
 					bilder[i].style.marginTop="8px";
 					bilder[i].style.maxWidth="30vw";
-					bilder[i].style.marginLeft="8px";
+					bilder[i].style.marginLeft="4vw";
 					bilder[i].style.height="100%";
 				}
 			  }
 		}
 	}
 
-//$(window).resize(checkWidth);
-//document.getElementById("body").onload = function() {checkWidth()};
+// cache the element
+var $navBar = $('.nav');
+
+// find original navigation bar position
+var navPos = $navBar.offset().top;
+
+// on scroll
+$(window).scroll(function() {
+
+    // get scroll position from top of the page
+    var scrollPos = $(this).scrollTop();
+
+    // check if scroll position is >= the nav position
+    if (scrollPos >= navPos) {
+        $navBar.addClass('fixed');
+    } else {
+        $navBar.removeClass('fixed');
+    }
+
+});

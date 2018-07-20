@@ -32,18 +32,79 @@ p
 	/*The trick is that 100vw represents 100% of the viewport including the scrollbar. If you subtract 100%, which is the available space without the scrollbar, you end up with the width of the scrollbar or 0 if it is not present. Creating a padding of that width on the left will simulate a second scrollbar, shifting centered content back to the right. Please note that this will only work if the scrollable element uses the page's entire width, but this should be no problem most of the time because there are only few other cases where you have centered scrollable content.*/
 	}
 
-#myBtnContainer {
-	text-align:center;
-	max-width: 80vw;
-	margin-left: 6vw;	
-	margin-right: 14vw;	
+.BtnContainer {
+	/*text-align:center;*/
+	list-style: none;
+	z-index: 1;
+	/*max-width: 80vw;
+	/*margin-left: 50vw;
+	transform: translateX(-50%);*/
+	display: flex;
+	flex-wrap: wrap;
+
+	/*margin-left: 7vw;	
+	/*margin-right: 14vw;*/	
+	background-color: white;
+	/*transform: translateX(20%);*/
+	justify-content: center;
+	-webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
 	padding-left: calc(100vw - 100%);	/*necessary to prevent element from shifting left when scrollbar appears*/
 	/*The trick is that 100vw represents 100% of the viewport including the scrollbar. If you subtract 100%, which is the available space without the scrollbar, you end up with the width of the scrollbar or 0 if it is not present. Creating a padding of that width on the left will simulate a second scrollbar, shifting centered content back to the right. Please note that this will only work if the scrollable element uses the page's entire width, but this should be no problem most of the time because there are only few other cases where you have centered scrollable content.*/
+}
+
+.nav-wrapper {
+    /*height: 80px;*/
+    text-align: center;
+	margin-top: 0;
+}
+
+.nav-wrapper .nav {
+    /*height: 80px;*/
+    /*padding: 0 40px;*/
+    /*line-height: 80px;*/
+	margin-top: 0;
+}
+
+.nav-wrapper .nav.fixed {
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    right: 0;
+	margin-top: 0;
 }	
+
+/*.BtnContainer li{
+	display: inline;
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	/*transform: translateX(-50%);*/
+	/*left: 50%;*/
+	/*z-index: 1;
+	background-color: white;
 	
+	margin-top:0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+}
+
+.sticky + .grid {
+	/*padding-top: 44.909px;*/
+	/*padding-top: 0px;
+}*/
+
 .btn {
 	margin-top: 2px;
-	margin-bottom: 2px;
+	margin-bottom: 4px;
 	border-style: none;
 	outline: none;
 	padding: 10px 14px;
@@ -52,6 +113,7 @@ p
 	font-family: Arial, serif;
 	font-size: 16px;
 	transition-duration: 0.3s;
+	white-space: nowrap;
 }
 
 .btn:hover {
@@ -144,13 +206,13 @@ p
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 2; /* Sit on top */
     padding-top: 0px; /* Location of the box */
     left: 0px;	
     top: 0px;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-	overflow: scroll;
+	overflow-y: scroll;
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
@@ -162,6 +224,11 @@ p
     display: block;
 	width: 90vw;
 }
+
+/*.modalHeader {
+	/*display: none; /* Hidden by default 
+	position: fixed;
+}*/
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
 #caption {
@@ -188,7 +255,8 @@ p
 
 /* The Close Button */
 .close {
-    position: absolute;
+    /*position: absolute;*/
+	position: fixed;
     top: 15px;
     right: 35px;
     color: #f1f1f1;
