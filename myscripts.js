@@ -680,7 +680,7 @@ function checkWidth(numberOfImg){
 				document.getElementById("grid").style.marginTop="8px";
 				document.getElementById("grid").style.columnCount=1;
 				document.getElementById("grid").style.columnGap="8px";
-				document.getElementById("grid").style.marginLeft="19vw";
+				document.getElementById("grid").style.marginLeft="20.5vw";
 				document.getElementById("grid").style.marginRight="24vw";
 				document.getElementById("grid").style.maxWidth="60vw";
 				var bilder = document.getElementsByClassName("img");
@@ -715,7 +715,7 @@ function checkWidth(numberOfImg){
 				document.getElementById("grid").style.display="block";
 				document.getElementById("grid").style.marginTop="8px";
 				document.getElementById("grid").style.columnCount=2;
-				document.getElementById("grid").style.marginLeft="15vw";
+				document.getElementById("grid").style.marginLeft="17vw";
 				document.getElementById("grid").style.marginRight="24vw";
 				document.getElementById("grid").style.maxWidth="60vw";
 				document.getElementById("grid").style.minWidth="60vw";
