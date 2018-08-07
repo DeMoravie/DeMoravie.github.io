@@ -178,11 +178,15 @@ p
 #myImg62:hover {opacity: 0.7;}
 #myImg63:hover {opacity: 0.7;}
 
+/*----------------------*/
+/*------THE  MODAL------*/
+/*----------------------*/
+
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 11; /* Sit on top */
+    z-index: 50; /* Sit on top */
     padding-top: 0px; /* Location of the box */
     left: 0px;	
     top: 0px;
@@ -258,7 +262,6 @@ p
 /*----------------------*/
 /*-RETURN TO TOP BOTTON-*/
 /*----------------------*/
-
 
 #return-to-top {
     position: fixed;
