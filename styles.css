@@ -338,7 +338,7 @@ p
 		}
 	}
 
-	/*text sliding in from left for screen sizes of 600 - 1000px*/
+	/*text sliding in from the bottom up for screen sizes of 600 - 1000px*/
 	@media only screen and (max-width: 1000px){
 		.imgbox .hvrbox-layer_top {
 		 opacity: 0;	/* opacity: 0 = nicht sichtbar*/
@@ -347,7 +347,7 @@ p
 		 left: 25vw;
 		 bottom: 0;
 		 width: 50vw;
-		 height: 10vh;
+		 height: 72px;
 		 background: rgba(0, 0, 0, 0.6);
 		 color: #fff;
 		 padding: 15px;
@@ -545,12 +545,17 @@ opacity: 1;
  }
 */
 
+/*----------------------*/
+/*----CONTACT BOTTONS---*/
+/*----------------------*/
+
 .navbar {
   background: #FFFFFF;
   color: white;
   left: 10px;
   bottom: 10px;
   width: 5%;
+  z-index: 98;
 }
 
 .navbar ul{
@@ -559,10 +564,12 @@ opacity: 1;
   margin: 0;
   left: 10px;
   bottom: 10px;
+  z-index: 98;
 }
 
 .navbar-nav > li{
   list-style:none;
+  z-index: 98;
 }
 
 .navbar-nav > li > a{
@@ -571,5 +578,12 @@ opacity: 1;
 
 .navbar-nav > li > a > i{
 	color: rgba(0, 0, 0, 0.7);
-    font-size: 30px;
+	font-size: 5vw;
+}
+
+@media only screen and (min-width: 600px) {
+	.navbar-nav > li > a > i{
+		color: rgba(0, 0, 0, 0.7);
+		font-size: 25px;
+	}
 }
