@@ -549,23 +549,43 @@ opacity: 1;
 /*----CONTACT BOTTONS---*/
 /*----------------------*/
 
-.navbar {
-  background: #FFFFFF;
-  color: white;
-  left: 10px;
-  bottom: 10px;
-  width: 5%;
-  z-index: 98;
+@media only screen and (min-width: 600px) {
+	.navbar {
+	  background: #FFFFFF;
+	  color: white;
+	  left: 10px;
+	  bottom: 10px;
+	  width: 5%;
+	  z-index: 98;
+	}
+
+	.navbar ul{
+	  padding: 0;
+	  position: fixed;
+	  margin: 0;
+	  left: 10px;
+	  bottom: 10px;
+	  z-index: 98;
+	}
 }
 
-.navbar ul{
-  padding: 0;
-  position: fixed;
-  margin: 0;
-  left: 10px;
-  bottom: 10px;
-  z-index: 98;
-}
+.navbar {
+	  background: #FFFFFF;
+	  color: white;
+	  left: 5px;
+	  bottom: 5px;
+	  width: 5%;
+	  z-index: 98;
+	}
+
+	.navbar ul{
+	  padding: 0;
+	  position: fixed;
+	  margin: 0;
+	  left: 5px;
+	  bottom: 5px;
+	  z-index: 98;
+	}
 
 .navbar-nav > li{
   list-style:none;
