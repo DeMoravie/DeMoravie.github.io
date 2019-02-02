@@ -1,642 +1,106 @@
 	<!DOCTYPE html>
 <html>
 	<head>
+		<link rel="icon" href="icon.png">
 		<meta charset="utf-8"/>
 		<link rel="stylesheet" href="styles.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	<!-- includes google jQuery file -->
 		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-		<title>Page Title</title>
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<title>Detendo.me</title>
 	</head>
 	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
 	<body id="body" class="backgroundbody">
-		<h1>My First Heading</h1>
-		
-		<!--<div class="modalHeader" id="modalHeader">
-			<h2>My Header</h2>
-		</div>DeMoravie.github.io-->
-		
-		<p>My first paragraph.</p>
-		
-		<nav class="navbar">
-		  <ul class="navbar-nav">
-			<li><a href="#"><i class="fa fa-weixin"></i></a></li>
-			<li><a href="#"><i class="fa fa-qq"></i></a></li>
-			<li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
-			<li><a href="#"><i class="fa fa-facebook-official"></i></a></li>
-			<li><a href="#"><i class="fa fa-skype"></i></a></li>
-			<li><a href="#"><i class="fa fa-telegram"></i></a></li>	
-			<li><a href="#"><i class="fa fa-instagram"></i></a></li>	
-			<li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>	
-		  </ul>
-		</nav>
-		
-		
-		<div class="nav-wrapper">
-			<div class="nav">
-				<ul class ="BtnContainer" id="myBtnContainer">
-				  <li><button class="btn active" onclick="filterSelection('all')">Show all</button></li>
-				  <li><button class="btn" onclick="filterSelection('Streets')">Streets</button></li>
-				  <li><button class="btn" onclick="filterSelection('Nature')">Nature</button></li>
-				  <li><button class="btn" onclick="filterSelection('Abstract')">Abstract</button></li>
-				  <li><button class="btn" onclick="filterSelection('Horizon')">Horizon</button></li>
-				  <li><button class="btn" onclick="filterSelection('Animals')">Animals</button></li>
-				  <li><button class="btn" onclick="filterSelection('People')">People</button></li>
-				  <li><button class="btn" onclick="filterSelection('Flowers')">Flowers</button></li>
-				  <li><button class="btn" onclick="filterSelection('Cities')">Cities</button></li>
-				  <li><button class="btn" onclick="filterSelection('Trees')">Trees</button></li>
-				  <li><button class="btn" onclick="filterSelection('Clouds')">Clouds</button></li>
-				  <li><button class="btn" onclick="filterSelection('Interior')">Interior</button></li>
-				</ul>
-			</div>
-		</div>
-				
-		<div class="grid" id="grid"> 
-			<div class="imgbox">
-				<img class = "show img Streets" id="myImg1" src="1.jpg" title="Painting 1">
-				<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Nature" id="myImg2" src="2.jpg" title="Painting 2">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Abstract" id="myImg3" src="3.jpg" title="Painting 3">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Abstract" id="myImg4" src="4.jpg" title="Painting 4">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Horizon" id="myImg5" src="5.jpg" title="Painting 5">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Animals" id="myImg6" src="6.jpg" title="Painting 6">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Abstract" id="myImg7" src="7.jpg" title="Painting 7">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Abstract" id="myImg8" src="8.jpg" title="Painting 8">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img People" id="myImg9" src="9.jpg" title="Painting 9">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Abstract" id="myImg10" src="10.jpg" title="Painting 10">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Flowers" id="myImg11" src="11.jpg" title="Painting 11">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Cities" id="myImg12" src="12.jpg" title="Painting 12">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Cities" id="myImg13" src="13.jpg" title="Painting 13">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img People" id="myImg14" src="14.jpg" title="Painting 14">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img People" id="myImg15" src="15.jpg" title="Painting 15">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Trees" id="myImg16" src="16.jpg" title="Painting 16">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Clouds" id="myImg17" src="17.jpg" title="Painting 17">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">			
-			<img class = "show img Clouds" id="myImg18" src="18.jpg" title="Painting 18">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Animals" id="myImg19" src="19.jpg" title="Painting 19">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Interior" id="myImg20" src="20.jpg" title="Painting 20">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img People" id="myImg21" src="21.jpg" title="Painting 21">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Animals" id="myImg22" src="22.jpg" title="Painting 22">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img People" id="myImg23" src="23.jpg" title="Painting 23">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Nature" id="myImg24" src="24.jpg" title="Painting 24">	
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img People" id="myImg25" src="25.jpg" title="Painting 25">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img People" id="myImg26" src="26.jpg" title="Painting 26">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Clouds" id="myImg27" src="27.jpg" title="Painting 27">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">			
-			<img class = "show img Clouds" id="myImg28" src="28.jpg" title="Painting 28">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Animals" id="myImg29" src="29.jpg" title="Painting 29">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Interior" id="myImg30" src="30.jpg" title="Painting 30">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Animals" id="myImg31" src="31.jpg" title="Painting 31">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Abstract" id="myImg32" src="32.jpg" title="Painting 32">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Abstract" id="myImg33" src="33.jpg" title="Painting 33">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img People" id="myImg34" src="34.jpg" title="Painting 34">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Abstract" id="myImg35" src="35.jpg" title="Painting 35">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Flowers" id="myImg36" src="36.jpg" title="Painting 36">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Cities" id="myImg37" src="37.jpg" title="Painting 37">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Cities" id="myImg38" src="38.jpg" title="Painting 38">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img People" id="myImg39" src="39.jpg" title="Painting 39">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img People" id="myImg40" src="40.jpg" title="Painting 40">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Trees" id="myImg41" src="41.jpg" title="Painting 41">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Clouds" id="myImg42" src="42.jpg" title="Painting 42">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">			
-			<img class = "show img Clouds" id="myImg43" src="43.jpg" title="Painting 43">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Animals" id="myImg44" src="44.jpg" title="Painting 44">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Interior" id="myImg45" src="45.jpg" title="Painting 45">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img People" id="myImg46" src="46.jpg" title="Painting 46">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Animals" id="myImg47" src="47.jpg" title="Painting 47">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img People" id="myImg48" src="48.jpg" title="Painting 48">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Nature" id="myImg49" src="49.jpg" title="Painting 49">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>			
-			<div class="imgbox">
-			<img class = "show img People" id="myImg50" src="50.jpg" title="Painting 50">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img People" id="myImg51" src="51.jpg" title="Painting 51">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Trees" id="myImg52" src="52.jpg" title="Painting 52">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Clouds" id="myImg53" src="53.jpg" title="Painting 53">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">			
-			<img class = "show img Clouds" id="myImg54" src="54.jpg" title="Painting 54">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Animals" id="myImg55" src="55.jpg" title="Painting 55">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Interior" id="myImg56" src="56.jpg" title="Painting 56">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img People" id="myImg57" src="57.jpg" title="Painting 57">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Animals" id="myImg58" src="58.jpg" title="Painting 58">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img People" id="myImg59" src="59.jpg" title="Painting 59">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Nature" id="myImg60" src="60.jpg" title="Painting 60">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>			
-			<div class="imgbox">
-			<img class = "show img People" id="myImg61" src="61.jpg" title="Painting 61">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">
-			<img class = "show img Nature" id="myImg62" src="62.jpg" title="Painting 62">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
-			<div class="imgbox">			
-			<img class = "show img People" id="myImg63" src="63.jpg" title="Painting 63">
-			<div class = "hvrbox-layer_top hvrbox-layer_slideright">
-					<div class= "hvrbox-text">text text<br/>
-					text<br/>
-					text
-					</div>
-				</div>
-			</div>
+		<div class="topnav">
+			<a class="active" href="#home">Marketplace</a>
+			<a href="news.html">News</a>
+			<a href="contact.html">Contact</a>
+			<a href="about.html">About</a>
 		</div>
 		
-		<!-- The Modal -->
-		<div id="myModal" class="modal">
-
-		  <!-- The Close Button -->
-		  <span class="close">&times;</span>	/*X-Sign*/
-
-		  <!-- Modal Content (The Image) -->
-		  <img class="modal-content" id="modalImg">
-
-		  <!-- Modal Caption (Image Text) -->
-		  <div id="caption"></div>
-		</div>		
+		<div class="blank1">
+		</div>
 		
-		<!-- Return to Top -->
-		<a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>	<!-- https://fontawesome.com/icons?d=gallery !-->
-		<!-- ICON NEEDS FONT AWESOME FOR CHEVRON UP ICON -->
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type='text/css'>
+		<div class="dropdown">
+		  <button class="dropbtn"><span style="font-size:12px;cursor:pointer" id="menubtnTop">&#9776; </span>Sort by</button>
+		  <div class="dropdown-content">
+			<a href="indexDate.html">Date</a>
+			<a href="indexSize.html">Size</a>
+			<a href="indexPrice.html">Price</a>
+		  </div>
+		</div>
+		
+		<div class="blank2">
+		</div>
+		
+		<div class="imageContainer">
+			<a href="img1.html"><img class = "Img" id="myImage1" src="1.jpg" title="Painting 1"></a>
+			<a href="img2.html"><img class = "Img" id="myImage2" src="2.jpg" title="Painting 2"></a>
+			<a href="img3.html"><img class = "Img" id="myImage3" src="3.jpg" title="Painting 3"></a>
+			<a href="img4.html"><img class = "Img" id="myImage4" src="4.jpg" title="Painting 4"></a>
+			<a href="img5.html"><img class = "Img" id="myImage5" src="5.jpg" title="Painting 5"></a>
+			<a href="img6.html"><img class = "Img" id="myImage6" src="6.jpg" title="Painting 6"></a>
+			<a href="img7.html"><img class = "Img" id="myImage7" src="7.jpg" title="Painting 7"></a>
+			<a href="img8.html"><img class = "Img" id="myImage8" src="8.jpg" title="Painting 8"></a>
+			<a href="img9.html"><img class = "Img" id="myImage9" src="9.jpg" title="Painting 9"></a>
+			<a href="img10.html"><img class = "Img" id="myImage10" src="10.jpg" title="Painting 10"></a>
+			<a href="img11.html"><img class = "Img" id="myImage11" src="11.jpg" title="Painting 11"></a>
+			<a href="img12.html"><img class = "Img" id="myImage12" src="12.jpg" title="Painting 12"></a>
+			<a href="img13.html"><img class = "Img" id="myImage13" src="13.jpg" title="Painting 13"></a>
+			<a href="img14.html"><img class = "Img" id="myImage14" src="14.jpg" title="Painting 14"></a>
+			<a href="img15.html"><img class = "Img" id="myImage15" src="15.jpg" title="Painting 15"></a>
+			<a href="img16.html"><img class = "Img" id="myImage16" src="16.jpg" title="Painting 16"></a>
+			<a href="img17.html"><img class = "Img" id="myImage17" src="17.jpg" title="Painting 17"></a>
+			<a href="img18.html"><img class = "Img" id="myImage18" src="18.jpg" title="Painting 18"></a>
+			<a href="img19.html"><img class = "Img" id="myImage19" src="19.jpg" title="Painting 19"></a>
+			<a href="img20.html"><img class = "Img" id="myImage20" src="20.jpg" title="Painting 20"></a>
+			<a href="img21.html"><img class = "Img" id="myImage21" src="21.jpg" title="Painting 21"></a>
+			<a href="img22.html"><img class = "Img" id="myImage22" src="22.jpg" title="Painting 22"></a>
+			<a href="img23.html"><img class = "Img" id="myImage23" src="23.jpg" title="Painting 23"></a>
+			<a href="img24.html"><img class = "Img" id="myImage24" src="24.jpg" title="Painting 24"></a>
+			<a href="img25.html"><img class = "Img" id="myImage25" src="25.jpg" title="Painting 25"></a>
+			<a href="img26.html"><img class = "Img" id="myImage26" src="26.jpg" title="Painting 26"></a>
+			<a href="img27.html"><img class = "Img" id="myImage27" src="27.jpg" title="Painting 27"></a>
+			<a href="img28.html"><img class = "Img" id="myImage28" src="28.jpg" title="Painting 28"></a>
+			<a href="img29.html"><img class = "Img" id="myImage29" src="29.jpg" title="Painting 29"></a>
+			<a href="img30.html"><img class = "Img" id="myImage30" src="30.jpg" title="Painting 30"></a>
+			<a href="img31.html"><img class = "Img" id="myImage31" src="31.jpg" title="Painting 31"></a>
+			<a href="img32.html"><img class = "Img" id="myImage32" src="32.jpg" title="Painting 32"></a>
+			<a href="img33.html"><img class = "Img" id="myImage33" src="33.jpg" title="Painting 33"></a>
+			<a href="img34.html"><img class = "Img" id="myImage34" src="34.jpg" title="Painting 34"></a>
+			<a href="img35.html"><img class = "Img" id="myImage35" src="35.jpg" title="Painting 35"></a>
+			<a href="img36.html"><img class = "Img" id="myImage36" src="36.jpg" title="Painting 36"></a>
+			<a href="img37.html"><img class = "Img" id="myImage37" src="37.jpg" title="Painting 37"></a>
+			<a href="img38.html"><img class = "Img" id="myImage38" src="38.jpg" title="Painting 38"></a>
+			<a href="img39.html"><img class = "Img" id="myImage39" src="39.jpg" title="Painting 39"></a>
+			<a href="img40.html"><img class = "Img" id="myImage40" src="40.jpg" title="Painting 40"></a>
+			<a href="img41.html"><img class = "Img" id="myImage41" src="41.jpg" title="Painting 41"></a>
+			<a href="img42.html"><img class = "Img" id="myImage42" src="42.jpg" title="Painting 42"></a>
+			<a href="img43.html"><img class = "Img" id="myImage43" src="43.jpg" title="Painting 43"></a>
+			<a href="img44.html"><img class = "Img" id="myImage44" src="44.jpg" title="Painting 44"></a>
+			<a href="img45.html"><img class = "Img" id="myImage45" src="45.jpg" title="Painting 45"></a>
+			<a href="img46.html"><img class = "Img" id="myImage46" src="46.jpg" title="Painting 46"></a>
+			<a href="img47.html"><img class = "Img" id="myImage47" src="47.jpg" title="Painting 47"></a>
+			<a href="img48.html"><img class = "Img" id="myImage48" src="48.jpg" title="Painting 48"></a>
+			<a href="img49.html"><img class = "Img" id="myImage49" src="49.jpg" title="Painting 49"></a>
+			<a href="img50.html"><img class = "Img" id="myImage50" src="50.jpg" title="Painting 50"></a>
+			<a href="img51.html"><img class = "Img" id="myImage51" src="51.jpg" title="Painting 51"></a>
+			<a href="img52.html"><img class = "Img" id="myImage52" src="52.jpg" title="Painting 52"></a>
+			<a href="img53.html"><img class = "Img" id="myImage53" src="53.jpg" title="Painting 53"></a>
+			<a href="img54.html"><img class = "Img" id="myImage54" src="54.jpg" title="Painting 54"></a>
+			<a href="img55.html"><img class = "Img" id="myImage55" src="55.jpg" title="Painting 55"></a>
+			<a href="img56.html"><img class = "Img" id="myImage56" src="56.jpg" title="Painting 56"></a>
+			<a href="img57.html"><img class = "Img" id="myImage57" src="57.jpg" title="Painting 57"></a>
+			<a href="img58.html"><img class = "Img" id="myImage58" src="58.jpg" title="Painting 58"></a>
+			<a href="img59.html"><img class = "Img" id="myImage59" src="59.jpg" title="Painting 59"></a>
+			<a href="img60.html"><img class = "Img" id="myImage60" src="60.jpg" title="Painting 60"></a>
+			<a href="img61.html"><img class = "Img" id="myImage61" src="61.jpg" title="Painting 61"></a>
+			<a href="img62.html"><img class = "Img" id="myImage62" src="62.jpg" title="Painting 62"></a>
+			<a href="img63.html"><img class = "Img" id="myImage63" src="63.jpg" title="Painting 63"></a>
+		</div>
 		
 		<script src="myscripts.js"></script>
 	</body>

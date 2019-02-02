@@ -2,6 +2,7 @@
 var modal = document.getElementById('myModal');
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
+var imgX = document.getElementById('myImgX');
 var img1 = document.getElementById('myImg1');
 var img2 = document.getElementById('myImg2');
 var img3 = document.getElementById('myImg3');
@@ -69,18 +70,19 @@ var img63 = document.getElementById('myImg63');
 var modalImg = document.getElementById("modalImg");
 var captionText = document.getElementById("caption");
 
+imgX.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.title;
+	$("html").css({"overflow-y":"hidden"});
+}
+
 img1.onclick = function(){
     modal.style.display = "block";
     modalImg.src = this.src;
     captionText.innerHTML = this.title;
 	$("html").css({"overflow-y":"hidden"});
-	//$("#modalHeader").css({"display":"show"});
 }
-
-	/*$('.modal').scroll(function() {
-     var a=$('.modal').scrollTop();
-     $('.modalHeader').css('top',a+'px');
-	});*/
 
 img2.onclick = function(){
     modal.style.display = "block";
@@ -527,241 +529,8 @@ img63.onclick = function(){
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
+function closeModal() { 
   modal.style.display = "none";
   //document.body.style.overflow = "scroll";	//show background scroll bar after pushing close button of an image pop up
   $("html").css({"overflow":"scroll"});
 }
-
-function filterSelection(c) {	//Definition of function filterSelection
-  var x, i;
-  x = document.getElementsByClassName("img");
-  if (c == "all") c = "";
-  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-	w3RemoveClass(x[i], "hide");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-	if (x[i].className.indexOf(c) == -1) w3AddClass(x[i], "hide");	
-  }
-  numberOfImg("show");
-}
-
-// Show filtered elements
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {
-      element.className += " " + arr2[i];
-    }
-  }
-}
-
-// Hide elements that are not selected
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);
-    }
-  }
-  element.className = arr1.join(" ");
-}
-
-// Add active class to the current button (highlight it)
-// Get the container element
-var btnContainer = document.getElementById("myBtnContainer");
-// Get all buttons with class="btn" inside the container
-var btns = btnContainer.getElementsByClassName("btn");
-// Loop through the buttons and add the active class to the current/clicked button
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
-
-function numberOfImg(name) {
- var txt1 = "#grid .";
- var txt = txt1+name;
- var numberOfImg = document.querySelectorAll(txt).length;
- //document.getElementById("test").innerHTML = numberOfImg;
- checkWidth(numberOfImg);
- if (x.matches) { // If media query matches
-		//document.getElementById("grid").style.display="block";
-		//document.getElementById("grid").style.marginLeft="20vw";
-		//document.getElementById("grid").style.columnCount=1;
-		//document.getElementById("grid").style.marginRight="20vw";
-		//document.getElementById("grid").style.minWidth="100vw";
-		//document.getElementById("grid").style.columnGap="0px";
-		//document.getElementById("test").innerHTML = "f1";
-	} //else {
- if($(window).width() >= 800){
-		
- }
-}
-
-var x = window.matchMedia("(max-width: 800px)")
-//myFunction(x) // Call listener function at run time
-//x.addListener(numberOfImg()) // Attach listener function on state changes
-document.getElementById("body").onload = function() {numberOfImg("img")};
-
-$(document).ready(function(){
-	var txt1 = "#grid .";
-	var name = "img";
-	var txt = txt1+name;
-	var numberOfImg = document.querySelectorAll(txt).length;
-	checkWidth(numberOfImg);
-	//$(window).resize(checkWidth(numberOfImg));
-})
-
-$(window).resize(function() {
-	var txt1 = "#grid .";
-	var name = "show";
-	var txt = txt1+name;
-	var numberOfImg = document.querySelectorAll(txt).length;
-	checkWidth(numberOfImg);	
-});
-
-function checkWidth(numberOfImg){
-		var windowSize = $(window).width();
-		
-		if(windowSize < 800){
-			//alert("smaller than 800px");
-			//document.getElementById("grid").style.maxWidth="90vw";
-			//document.getElementById("grid").style.minWidth="90vw";
-			document.getElementById("grid").style.display="block";
-			document.getElementById("grid").style.marginTop="8px";
-			document.getElementById("grid").style.columnCount=1;
-			document.getElementById("grid").style.columnGap="8px";
-			document.getElementById("grid").style.marginLeft="0vw";
-			document.getElementById("grid").style.marginRight="10vw";
-			document.getElementById("grid").style.maxWidth="100vw";
-			var bilder = document.getElementsByClassName("img");
-			for(var i=0, j=bilder.length;i<j;i++)
-			{
-				bilder[i].style.marginTop="8px";
-				bilder[i].style.maxWidth="90vw";
-				//bilder[i].style.minWidth="90vw";
-				//bilder[i].style.minWidth="100vw";
-				bilder[i].style.marginLeft="5vw";
-				bilder[i].style.marginRight="5vw";
-				bilder[i].style.height="100%";
-				//bilder[i].style.justifyContent="center"
-			}
-		}
-		if(windowSize >= 800){
-			//alert("bigger than 800px");
-			//document.getElementById("test").innerHTML = "f2";		
-			 if (numberOfImg == 1) {
-				document.getElementById("grid").style.display="block";
-				document.getElementById("grid").style.marginTop="8px";
-				document.getElementById("grid").style.columnCount=1;
-				document.getElementById("grid").style.columnGap="8px";
-				document.getElementById("grid").style.marginLeft="31vw";
-				document.getElementById("grid").style.marginRight="39vw";
-				document.getElementById("grid").style.maxWidth="30vw";
-				var bilder = document.getElementsByClassName("img");
-				for(var i=0, j=bilder.length;i<j;i++)
-				{
-					bilder[i].style.marginTop="8px";
-					bilder[i].style.maxWidth="30vw";
-					bilder[i].style.marginLeft="4vw";
-					bilder[i].style.height="100%";
-				}
-			  }
-			 if (numberOfImg == 2) {
-				document.getElementById("grid").style.display="flex";
-				document.getElementById("grid").style.marginTop="8px";
-				document.getElementById("grid").style.columnCount=1;
-				document.getElementById("grid").style.columnGap="8px";
-				document.getElementById("grid").style.marginLeft="20.5vw";
-				document.getElementById("grid").style.marginRight="24vw";
-				document.getElementById("grid").style.maxWidth="60vw";
-				var bilder = document.getElementsByClassName("img");
-				for(var i=0, j=bilder.length;i<j;i++)
-				{
-					bilder[i].style.marginTop="8px";
-					bilder[i].style.maxWidth="30vw";
-					bilder[i].style.marginLeft="8px";
-					bilder[i].style.height="100%";
-					bilder[i].style.marginRight="0vw";
-				}
-			  }
-			 if (numberOfImg == 3) {
-				document.getElementById("grid").style.display="flex";
-				document.getElementById("grid").style.marginTop="8px";
-				document.getElementById("grid").style.columnCount=1;
-				document.getElementById("grid").style.columnGap="8px";
-				document.getElementById("grid").style.marginLeft="3vw";
-				document.getElementById("grid").style.maxWidth="90vw";
-				document.getElementById("grid").style.minWidth="90vw";
-				var bilder = document.getElementsByClassName("img");
-				for(var i=0, j=bilder.length;i<j;i++)
-				{
-					bilder[i].style.marginTop="8px";
-					bilder[i].style.maxWidth="30vw";
-					bilder[i].style.marginLeft="8px";
-					bilder[i].style.height="100%";
-					bilder[i].style.marginRight="0vw";
-				}
-			  }
-			 if (numberOfImg > 3) {
-				document.getElementById("grid").style.display="block";
-				document.getElementById("grid").style.marginTop="8px";
-				document.getElementById("grid").style.columnCount=2;
-				document.getElementById("grid").style.marginLeft="17vw";
-				document.getElementById("grid").style.marginRight="24vw";
-				document.getElementById("grid").style.maxWidth="60vw";
-				document.getElementById("grid").style.minWidth="60vw";
-				document.getElementById("grid").style.columnGap="8px";
-				var bilder = document.getElementsByClassName("img");
-				for(var i=0, j=bilder.length;i<j;i++)
-				{
-					bilder[i].style.marginTop="8px";
-					bilder[i].style.maxWidth="30vw";
-					bilder[i].style.marginLeft="4vw";
-					bilder[i].style.height="100%";
-				}
-			  }
-		}
-	}
-
-// cache the element
-var $navBar = $('.nav');
-
-// find original navigation bar position
-var navPos = $navBar.offset().top;
-
-// on scroll
-$(window).scroll(function() {
-    // get scroll position from top of the page
-    var scrollPos = $(this).scrollTop();
-
-    // check if scroll position is >= the nav position
-    if (scrollPos >= navPos) {
-        $navBar.addClass('fixed');
-    } else {
-        $navBar.removeClass('fixed');
-    }
-});
-
-// ===== Scroll to Top ==== 
-$(window).scroll(function() {
-    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
-        $('#return-to-top').fadeIn(200);    // Fade in the arrow
-    } else {
-        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
-    }
-});
-
-$('#return-to-top').click(function() {      // When arrow is clicked
-    $('body,html').animate({
-        scrollTop : 0                       // Scroll to top of body
-    }, 500);
-});

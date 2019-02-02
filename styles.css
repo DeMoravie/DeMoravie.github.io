@@ -1,182 +1,138 @@
-* {
-    box-sizing: border-box;
+/* Add a black background color to the top navigation */
+body {
+	margin-left: 2vw;
+	margin-right: 2vw;
+	font-family: Fira Sans;
 }
 
-html {
-	min-height: 100vh; /*vh = Relative to 1% of the height of the viewport*.*Viewport = the browser window size. If the viewport is 50cm wide, 1vw = 0.5cm.*/
-	overflow-x: hidden;
+.topnav {
+    background-color: #FFFFFF;
+    overflow: hidden;
 }
 
-body 
-	{
-	/*background: linear-gradient(to bottom, rgba(51, 51, 204,0), rgba(51, 51, 204,0.1), rgba(51, 51, 204,0.1),rgba(51, 51, 204,0.2), rgba(51, 51, 204,0.6));*/
-	}
-	
-h1 
-	{
-	position: relative;	 
-    color: black;
-	text-align: center;	
-	font-family: Arial, serif;	/* serif = fallback font*/
-	padding-left: calc(100vw - 100%);	/*necessary to prevent element from shifting left when scrollbar appears*/
-	/*The trick is that 100vw represents 100% of the viewport including the scrollbar. If you subtract 100%, which is the available space without the scrollbar, you end up with the width of the scrollbar or 0 if it is not present. Creating a padding of that width on the left will simulate a second scrollbar, shifting centered content back to the right. Please note that this will only work if the scrollable element uses the page's entire width, but this should be no problem most of the time because there are only few other cases where you have centered scrollable content.*/
-	}
-	
-p 
-	{
-    color: black;
-	position: relative;
-	text-align: center;
-	font-family: Arial, serif;
-	padding-left: calc(100vw - 100%);	/*necessary to prevent element from shifting left when scrollbar appears*/
-	/*The trick is that 100vw represents 100% of the viewport including the scrollbar. If you subtract 100%, which is the available space without the scrollbar, you end up with the width of the scrollbar or 0 if it is not present. Creating a padding of that width on the left will simulate a second scrollbar, shifting centered content back to the right. Please note that this will only work if the scrollable element uses the page's entire width, but this should be no problem most of the time because there are only few other cases where you have centered scrollable content.*/
-	}
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #111111;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+}
 
-.BtnContainer {
-	/*text-align:center;*/
-	list-style: none;
-	z-index: 1;
-	/*max-width: 80vw;
-	/*margin-left: 50vw;
-	transform: translateX(-50%);*/
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #39CCCC;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #F012BE;
+    color: white;
+}
+
+.blank1 {
+    width: 100vh;
+    height: 10px;
+    background-color: white;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #FFFFFF;
+    color: black;
+    padding: 8px;
+    font-size: 12px;
+    border: none;
+	font-family: Fira Sans;
+	cursor: pointer;
+	width: 100px;
+	text-align: left;
+	border-style: solid;
+	border-width: 1px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFFFFF;
+    width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+	font-size: 12px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #39CCCC;}
+
+.blank2 {
+    width: 100vh;
+    height: 12px;
+    background-color: white;
+}
+
+.imageContainer {
 	display: flex;
 	flex-wrap: wrap;
-	margin-top:0px;
-	/*margin-left: 7vw;	
-	/*margin-right: 14vw;*/	
-	background-color: white;
-	/*transform: translateX(20%);*/
-	justify-content: center;
-	-webkit-margin-before: 0em;
-    -webkit-margin-after: 0em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-    -webkit-padding-start: 0px;
-	padding-left: calc(100vw - 100%);	/*necessary to prevent element from shifting left when scrollbar appears*/
-	/*The trick is that 100vw represents 100% of the viewport including the scrollbar. If you subtract 100%, which is the available space without the scrollbar, you end up with the width of the scrollbar or 0 if it is not present. Creating a padding of that width on the left will simulate a second scrollbar, shifting centered content back to the right. Please note that this will only work if the scrollable element uses the page's entire width, but this should be no problem most of the time because there are only few other cases where you have centered scrollable content.*/
+	align-items: center;
 }
 
-.nav-wrapper {
-    /*height: 80px;*/
-    text-align: center;
-	margin-top: 0;
-}
-
-.nav-wrapper .nav {
-    /*height: 80px;*/
-    /*padding: 0 40px;*/
-    /*line-height: 80px;*/
-	margin-top: 0;
-}
-
-.nav-wrapper .nav.fixed {
-    position: fixed;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    right: 0;
-	margin-top: 0;
-}	
-
-.btn {
-	margin-top: 2px;
-	margin-bottom: 4px;
-	border-style: none;
-	outline: none;
-	padding: 10px 14px;
-	background-color: white;
+.Img {
+	padding-right: 20px;
+	padding-bottom: 20px;
+	width: 10vw;
+    height: 100%;
 	cursor: pointer;
-	font-family: Arial, serif;
-	font-size: 16px;
-	transition-duration: 0.3s;
-	white-space: nowrap;
 }
 
-.btn:hover {
-	background-color: #ddd;
-	color: white;
+.imgSite {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;	
 }
 
-.btn.active {
-	background-color: #666;
-	color: white;
+.imgDescription {
+	width: 43vw;
 }
 
-.hide{
-	display: none;	
+.ImgBig {
+	padding-right: 20px;
+	padding-bottom: 20px;
+	width: 50vw;
+    height: 100%;
+	cursor: pointer;
 }
 
-/* Style the Image Used to Trigger the Modal */
-#myImg1,#myImg2, #myImg3, #myImg4, #myImg5, #myImg6, #myImg7, #myImg8, #myImg9, #myImg10, #myImg11, #myImg12, #myImg13, #myImg14, #myImg15, #myImg16, #myImg17, #myImg18, #myImg19, #myImg20, #myImg21, #myImg22, #myImg23, #myImg24, #myImg25, #myImg26, #myImg27, #myImg28, #myImg29, #myImg30, #myImg31, #myImg32, #myImg33, #myImg34, #myImg35, #myImg36, #myImg37, #myImg38, #myImg39, #myImg40, #myImg41, #myImg42, #myImg43, #myImg44, #myImg45, #myImg46, #myImg47, #myImg48, #myImg49, #myImg50, #myImg51, #myImg52, #myImg53, #myImg54, #myImg55, #myImg56, #myImg57, #myImg58, #myImg59, #myImg60, #myImg61, #myImg62, #myImg63 {
-    cursor: pointer;
-    transition: 0.3s;
-	-webkit-transform: translateZ(0);	/* necessary to fix transition-opacity-blinking-glitch when hovering over images */
-	width: calc(100% + .49px);	/* necessary to fix transition-opacity-blinking-glitch when hovering over images */
+.Img:hover {
+	opacity: 0.7;
 }
 
-#myImg1:hover {opacity: 0.7;}
-#myImg2:hover {opacity: 0.7;}
-#myImg3:hover {opacity: 0.7;}
-#myImg4:hover {opacity: 0.7;}
-#myImg5:hover {opacity: 0.7;}
-#myImg6:hover {opacity: 0.7;}
-#myImg7:hover {opacity: 0.7;}
-#myImg8:hover {opacity: 0.7;}
-#myImg9:hover {opacity: 0.7;}
-#myImg10:hover {opacity: 0.7;}
-#myImg11:hover {opacity: 0.7;}
-#myImg12:hover {opacity: 0.7;}
-#myImg13:hover {opacity: 0.7;}
-#myImg14:hover {opacity: 0.7;}
-#myImg15:hover {opacity: 0.7;}
-#myImg16:hover {opacity: 0.7;}
-#myImg17:hover {opacity: 0.7;}
-#myImg18:hover {opacity: 0.7;}
-#myImg19:hover {opacity: 0.7;}
-#myImg20:hover {opacity: 0.7;}
-#myImg21:hover {opacity: 0.7;}
-#myImg22:hover {opacity: 0.7;}
-#myImg23:hover {opacity: 0.7;}
-#myImg24:hover {opacity: 0.7;}
-#myImg25:hover {opacity: 0.7;}
-#myImg26:hover {opacity: 0.7;}
-#myImg27:hover {opacity: 0.7;}
-#myImg28:hover {opacity: 0.7;}
-#myImg29:hover {opacity: 0.7;}
-#myImg30:hover {opacity: 0.7;}
-#myImg31:hover {opacity: 0.7;}
-#myImg32:hover {opacity: 0.7;}
-#myImg33:hover {opacity: 0.7;}
-#myImg34:hover {opacity: 0.7;}
-#myImg35:hover {opacity: 0.7;}
-#myImg36:hover {opacity: 0.7;}
-#myImg37:hover {opacity: 0.7;}
-#myImg38:hover {opacity: 0.7;}
-#myImg39:hover {opacity: 0.7;}
-#myImg40:hover {opacity: 0.7;}
-#myImg41:hover {opacity: 0.7;}
-#myImg42:hover {opacity: 0.7;}
-#myImg43:hover {opacity: 0.7;}
-#myImg44:hover {opacity: 0.7;}
-#myImg45:hover {opacity: 0.7;}
-#myImg46:hover {opacity: 0.7;}
-#myImg47:hover {opacity: 0.7;}
-#myImg48:hover {opacity: 0.7;}
-#myImg49:hover {opacity: 0.7;}
-#myImg50:hover {opacity: 0.7;}
-#myImg51:hover {opacity: 0.7;}
-#myImg52:hover {opacity: 0.7;}
-#myImg53:hover {opacity: 0.7;}
-#myImg54:hover {opacity: 0.7;}
-#myImg55:hover {opacity: 0.7;}
-#myImg56:hover {opacity: 0.7;}
-#myImg57:hover {opacity: 0.7;}
-#myImg58:hover {opacity: 0.7;}
-#myImg59:hover {opacity: 0.7;}
-#myImg60:hover {opacity: 0.7;}
-#myImg61:hover {opacity: 0.7;}
-#myImg62:hover {opacity: 0.7;}
-#myImg63:hover {opacity: 0.7;}
+.ImgBig:hover {
+	opacity: 0.7;
+}
+
 
 /*----------------------*/
 /*------THE  MODAL------*/
@@ -254,382 +210,36 @@ p
     cursor: pointer;
 }
 
-.social-media{
-    display: flex;
-    justify-content: center;
-}
-
 /*----------------------*/
-/*-RETURN TO TOP BOTTON-*/
+/*-------BUY AREA-------*/
 /*----------------------*/
 
-#return-to-top {
-    position: fixed;
-    bottom: 10px;
-    right: 1vw;
-	/*transform: translateX(-50%);
-	-webkit-transform:translate(-50%,0%);
-	-ms-transform:translate(-50%,0%);*/
-    background: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.7);
-    width: 50px;
-    height: 50px;
-    /*display: block;*/
-    text-decoration: none;
-    -webkit-border-radius: 35px;
-    -moz-border-radius: 35px;
-    border-radius: 35px;
-    display: none;
-	z-index: 99; /* Make sure it does not overlap */
-    -webkit-transition: all 0.3s linear;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+.myButton {
+	background-color:#44c767;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	/*cursor:pointer;*/
+	color:#ffffff;
+	font-family:Fira Sans;
+	font-size:17px;
+	font-weight: bold;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.myButton:hover {
+	/*background-color:#5cbf2a;*/
+}
+.myButton:active {
+	position:relative;
+	top:1px;
 }
 
-#return-to-top i {
-    color: #fff;
-    margin: 0;
-    position: relative;
-    left: 16px;
-    top: 13px;
-    font-size: 19px;
-	z-index: 99; /* Make sure it does not overlap */
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-}
-#return-to-top:hover {
-    background: rgba(0, 0, 0, 0.9);
-}
-
-@media (hover: hover) {
-	#return-to-top:hover i {
-		color: #fff;
-		top: 5px;
-		/*ALTERNATIVLOESUNG*/
-		/*-moz-transform: translate(-20px, -2px);
-		-ms-transform: translate(-20px, -2px);
-		-o-transform: translate(-20px, -2px);
-		-webkit-transform: translate(-20px, -2px);
-		transform: translate(-20px, -2px)*/
-	}
-}
-
-/*disable hover effects for device which do not support hover function e.g. smartphones*/
-@media (hover: none) {
-	#return-to-top:hover i {
-		color: #fff;
-		top: 13px;
-		/*ALTERNATIVLOESUNG*/
-		/*-moz-transform: translate(-20px, -2px);
-		-ms-transform: translate(-20px, -2px);
-		-o-transform: translate(-20px, -2px);
-		-webkit-transform: translate(-20px, -2px);
-		transform: translate(-20px, -2px)*/
-	}
-}
-
-/*----------------------*/
-/*----SLIDE IN FIELD----*/
-/*----------------------*/
-
-.imgbox .hvrbox-layer_bottom {
- display: block;
-}
-
-@media only screen and (min-width: 600px) {
-	/*text sliding in from left for screen sizes bigger than 1000px*/
-	@media only screen and (min-width: 1000px) {
-		.imgbox .hvrbox-layer_top {
-		 opacity: 0;	/* opacity: 0 = nicht sichtbar*/
-		 position: fixed; 
-		 top: 30vh;
-		 left: 0;
-		 right: 0;
-		 bottom: 0;
-		 width: 10vw;
-		 height: 20vh;
-		 background: rgba(0, 0, 0, 0.6);
-		 color: #fff;
-		 padding: 15px;
-		 -moz-transition: all 0.4s ease-in-out 0s;
-		 -webkit-transition: all 0.4s ease-in-out 0s;
-		 -ms-transition: all 0.4s ease-in-out 0s;
-		 -o-transition: all 0.4s ease-in-out 0s;
-		 transition: all 0.4s ease-in-out 0s;
-		}
-	}
-
-	/*text sliding in from the bottom up for screen sizes of 600 - 1000px*/
-	@media only screen and (max-width: 1000px){
-		.imgbox .hvrbox-layer_top {
-		 opacity: 0;	/* opacity: 0 = nicht sichtbar*/
-		 position: fixed; 
-		 z-index:12;
-		 left: 25vw;
-		 bottom: 0;
-		 width: 50vw;
-		 height: 72px;
-		 background: rgba(0, 0, 0, 0.6);
-		 color: #fff;
-		 padding: 15px;
-		 -moz-transition: all 0.4s ease-in-out 0s;
-		 -webkit-transition: all 0.4s ease-in-out 0s;
-		 -ms-transition: all 0.4s ease-in-out 0s;
-		 -o-transition: all 0.4s ease-in-out 0s;
-		 transition: all 0.4s ease-in-out 0s;
-		}
-	}
-}
-
-/*changes opacity of text to visible*/
-.imgbox:hover .hvrbox-layer_top,
-.imgbox.active .hvrbox-layer_top {
- opacity: 1;
-}
-
-@media only screen and (min-width: 600px) {
-	.imgbox .hvrbox-text {
-	 text-align: center;
-	 font-size: 18px;
-	 display: inline-block;
-	 position: fixed;
-	 top: 50%;
-	 left: 50%;
-	 -moz-transform: translate(-50%, -50%);
-	 -webkit-transform: translate(-50%, -50%);
-	 -ms-transform: translate(-50%, -50%);
-	 transform: translate(-50%, -50%);
-	}
-}
-
-@media only screen and (max-width: 600px) {
-	.imgbox .hvrbox-text {
-	 text-align: center;
-	 font-size: 18px;
-	 display: none;
-	 position: fixed;
-	 top: 50%;
-	 left: 50%;
-	 -moz-transform: translate(-50%, -50%);
-	 -webkit-transform: translate(-50%, -50%);
-	 -ms-transform: translate(-50%, -50%);
-	 transform: translate(-50%, -50%);
-	}
-}
-
-.imgbox .hvrbox-text_mobile {
- font-size: 15px;
- border-top: 1px solid rgb(179, 179, 179);
- border-top: 1px solid rgba(179, 179, 179, 0.7);
- margin-top: 5px;
- padding-top: 2px;
- display: none;
-}
-
-.imgbox.active .hvrbox-text_mobile {
- display: block;
-}
-
-@media only screen and (min-width: 600px) {
-	@media only screen and (min-width: 1000px) {
-		.imgbox .hvrbox-layer_slideright{
-			-moz-transform: translateX(-100%);
-			-webkit-transform: translateX(-100%);
-			-ms-transform: translateX(-100%);
-			transform: translateX(-100%);
-		}
-		.imgbox:hover .hvrbox-layer_slideright,
-		.imgbox.active .hvrbox-layer_slideright{
-			-moz-transform: translateX(0);
-			-webkit-transform: translateX(0);
-			-ms-transform: translateX(0);
-			transform: translateX(0);
-		}	
-	}
-
-	@media only screen and (max-width: 1000px){
-		.imgbox .hvrbox-layer_slideright{
-			-moz-transform: translateY(100%);
-			-webkit-transform: translateY(100%);
-			-ms-transform: translateY(100%);
-			transform: translateY(100%);
-		}
-		.imgbox:hover .hvrbox-layer_slideright,
-		.imgbox.active .hvrbox-layer_slideright{
-			-moz-transform: translateY(0);
-			-webkit-transform: translateY(0);
-			-ms-transform: translateY(0);
-			transform: translateY(0);
-		}	
-	}
-}
-
-/*----------------------*/
-/*----SIDEBAR BOTTONS---*/
-/*----------------------*/
-/*
-.toggle {
-text-decoration: none;
-font-size: 2.75em;
-color: rgba(1, 1, 1, 1);
--webkit-transition: all 0.15s ease-out 0;
--moz-transition: all 0.15s ease-out 0;
-transition: all 0.45s ease-out 0;
-position: fixed;
-/*top: 20px;
-left: 20px;*/
-/*
-left: 10px;
-bottom: 5px;
-z-index: 1;
-cursor: pointer;
-}
-
-.closebtn {
-text-decoration: none;
-font-size: 2.75em;
-color: rgba(1, 1, 1, 1);
--webkit-transition: all 0.15s ease-out 0;
--moz-transition: all 0.15s ease-out 0;
-transition: all 0.45s ease-out 0;
-position: fixed;
-/*top: 20px;
-left: 20px;*/
-/*
-left: 10px;
-bottom: 5px;
-z-index: 1;
-cursor: pointer;
-opacity: 0;
-}
-
-/*----------------------*/
-/*----SIDEBAR MENU------*/
-/*----------------------*/
-/*
-.sidebar {
-position: fixed;
-bottom: -245px;
-left: -165px;
--webkit-transition: all 0.15s ease-out 0;
--moz-transition: all 0.15s ease-out 0;
-transition: all 0.15s ease-out 0;
-/*width: 8rem;*/
-/*padding: 1.5em;
-padding-top: 2em;
-/*padding-right: 2.5em;*/
-/*background: #19C4BC; */
-/*background: white;*/
-}
-/*
-.sidebar ul {
-list-style: none;
-margin: 0;
-padding: 0; 
-}
-
-.sidebar li a {
-color: #000000;
-/*font-family: 'Poiret One', cursive;*/
-/*font-family: "Avenir Next", "Avenir", sans-serif;*/
-/*
-font-family: Arial, serif;
-font-size: 20px;
-margin: 0;
-margin-bottom: 16px;
-cursor: pointer;
-text-decoration: none;
-line-height: 200%;
-}
-
-.sidebar a:hover {
-  color: rgba(0, 0, 0, 0.61); 
-}
-
-#slide:checked + .container .sidebar {
-left: 40px;
-bottom: 5px;
- }
-
-#slide:checked + .container .toggle {
-left: 120px;
-opacity: 0;
- }
-
-#slide {
-display: none; 
-}
-
-#slide:checked + .container .closebtn {
-left: 120px;
-opacity: 1;
- }
-*/
-
-/*----------------------*/
-/*----CONTACT BOTTONS---*/
-/*----------------------*/
-
-@media only screen and (min-width: 600px) {
-	.navbar {
-	  background: #FFFFFF;
-	  color: white;
-	  left: 10px;
-	  bottom: 10px;
-	  width: 5%;
-	  z-index: 49;
-	}
-
-	.navbar ul{
-	  padding: 0;
-	  position: fixed;
-	  margin: 0;
-	  left: 10px;
-	  bottom: 10px;
-	  z-index: 49;
-	}
-}
-
-.navbar {
-	  background: #FFFFFF;
-	  color: white;
-	  left: 5px;
-	  bottom: 5px;
-	  width: 5%;
-	  z-index: 49;
-	}
-
-	.navbar ul{
-	  padding: 0;
-	  position: fixed;
-	  margin: 0;
-	  left: 5px;
-	  bottom: 5px;
-	  z-index: 49;
-	}
-
-.navbar-nav > li{
-  list-style:none;
-  z-index: 49;
-}
-
-.navbar-nav > li > a{
-  color: black;
-}
-
-.navbar-nav > li > a > i{
-	color: rgba(0, 0, 0, 0.7);
-	font-size: 25px;
-}
-
-@media only screen and (min-width: 600px) {
-	.navbar-nav > li > a > i{
-		color: rgba(0, 0, 0, 0.7);
-		font-size: 35px;
-	}
+.buyContainer {
+	text-align: center;
+	/*cursor: pointer;*/
+	margin-top:18vh;
 }

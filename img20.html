@@ -1,0 +1,53 @@
+	<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="icon" href="icon.png">
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="styles.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	<!-- includes google jQuery file -->
+		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<title>Detendo.me</title>
+	</head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+	<body id="body" class="backgroundbody">
+		<div class="topnav">
+			<a class="active" href="index.html">Marketplace</a>
+			<a href="news.html">News</a>
+			<a href="contact.html">Contact</a>
+			<a href="about.html">About</a>
+		</div>
+		
+		<div class="blank1">
+		</div>
+		
+		<div class="imgSite">
+			<div class="bigImageContainer">
+				<img class = "ImgBig" id="myImgX" src="20.jpg" title="Painting 20">
+			</div>
+			<div class="imgDescription">
+				<div class="imgData">
+					<p>Title:<br>Year:<br>Dimensions:<br>Technique:<br>Framing:<br>Price:</p>
+				</div>
+				<div class="buyContainer">
+					<a class="myButton" id="buyBTN">Interesting in buying one of our paintings?</br>Get in contact with us personally via:</br>detendo.me@gmail.com</a>
+				</div>
+			</div>
+		</div>
+		
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+		  <!-- The Close Button -->
+		  <span class="close" onclick="closeModal()">&times;</span>	/*X-Sign*/
+		  <!-- Modal Content (The Image) -->
+		  <img class="modal-content" id="modalImg">
+		  <!-- Modal Caption (Image Text) -->
+		  <div id="caption"></div>
+		</div>		
+	
+		<script src="myscripts.js"></script>
+	</body>
+</html>
