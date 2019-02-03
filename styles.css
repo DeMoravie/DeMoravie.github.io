@@ -87,15 +87,21 @@ body {
     display: block;
 }
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+@media only screen and (min-width: 600px) {	/*hover does not work on mobile*/
+	/* Change color of dropdown links on hover */
+	.dropdown-content a:hover {background-color: #ddd;}
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+	/* Show the dropdown menu on hover */
+	.dropdown:hover .dropdown-content {display: block;}
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #39CCCC;}
+	/* Change the background color of the dropdown button when the dropdown content is shown */
+	.dropdown:hover .dropbtn {background-color: #39CCCC;}
+}
 
+/*for mobile*/
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+	
 .blank2 {
     width: 100vh;
     height: 12px;
