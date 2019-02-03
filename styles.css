@@ -2,6 +2,7 @@
 
 html {
 	overflow-x: hidden;
+	max-width: 100%;
 }
 
 
@@ -9,6 +10,8 @@ body {
 	margin-left: 2vw;
 	margin-right: 2vw;
 	font-family: Fira Sans;
+	overflow-x: hidden;
+	max-width: 100%;
 }
 
 .topnav {
