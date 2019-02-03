@@ -1,4 +1,10 @@
 /* Add a black background color to the top navigation */
+
+html {
+	overflow-x: hidden;
+}
+
+
 body {
 	margin-left: 2vw;
 	margin-right: 2vw;
