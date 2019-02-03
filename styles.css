@@ -271,8 +271,20 @@ body {
 	top:1px;
 }
 
-.buyContainer {
-	text-align: center;
-	/*cursor: pointer;*/
-	margin-top:18vh;
+@media only screen and (min-width: 600px) {
+	.buyContainer {
+		text-align: center;
+		/*cursor: pointer;*/
+		margin-top:18vh;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.buyContainer {
+		text-align: center;
+		/*cursor: pointer;*/
+		margin-top:5vh;
+		width: auto;
+		margin-left: 18vw;
+	}
 }
