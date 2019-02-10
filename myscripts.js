@@ -555,36 +555,3 @@ window.onclick = function(event) {
     }
   }
 }
-
-
-
-
-function cacheImages(array)
-{
-    if (!cacheImages.list) {
-        cacheImages.list = [];
-    }
-    var list = cacheImages.list;
-    for (var i = 0; i < array.length; i++) {
-        var img = new Image();
-        img.onload = function() {
-            var index = list.indexOf(this);
-            if (index !== -1) {
-                // remove image from the array once it's loaded
-                // for memory consumption reasons
-                list.splice(index, 1);
-            }
-        }
-        list.push(img);
-        img.src = array[i];
-    }
-}
-
-cacheImages(["1-compressor-resized.jpg", "2-compressor-resized.jpg", "3-compressor-resized.jpg", "4-compressor-resized.jpg", "5-compressor-resized.jpg", "6-compressor-resized.jpg", "7-compressor-resized.jpg", "8-compressor-resized.jpg", "9-compressor-resized.jpg", "10-compressor-resized.jpg", "11-compressor-resized.jpg", "12-compressor-resized.jpg", "13-compressor-resized.jpg", "14-compressor-resized.jpg", "15-compressor-resized.jpg", "16-compressor-resized.jpg", "17-compressor-resized.jpg", "18-compressor-resized.jpg", "19-compressor-resized.jpg", "20-compressor-resized.jpg", "21-compressor-resized.jpg", "22-compressor-resized.jpg", "23-compressor-resized.jpg", "24-compressor-resized.jpg", "25-compressor-resized.jpg", "26-compressor-resized.jpg", "27-compressor-resized.jpg", "28-compressor-resized.jpg", "29-compressor-resized.jpg", "30-compressor-resized.jpg", "31-compressor-resized.jpg", "32-compressor-resized.jpg", "33-compressor-resized.jpg", "34-compressor-resized.jpg", "35-compressor-resized.jpg", "36-compressor-resized.jpg", "37-compressor-resized.jpg", "38-compressor-resized.jpg", "39-compressor-resized.jpg", "40-compressor-resized.jpg", "41-compressor-resized.jpg", "42-compressor-resized.jpg", "43-compressor-resized.jpg", "44-compressor-resized.jpg", "45-compressor-resized.jpg", "46-compressor-resized.jpg", "47-compressor-resized.jpg", "48-compressor-resized.jpg", "49-compressor-resized.jpg", "50-compressor-resized.jpg", "51-compressor-resized.jpg", "52-compressor-resized.jpg", "53-compressor-resized.jpg", "54-compressor-resized.jpg", "55-compressor-resized.jpg", "56-compressor-resized.jpg", "57-compressor-resized.jpg", "58-compressor-resized.jpg", "59-compressor-resized.jpg", "60-compressor-resized.jpg", "61-compressor-resized.jpg", "62-compressor-resized.jpg", "63-compressor-resized.jpg"]);
-cacheImages(["1-compressor-25-min.jpg", "2-compressor-25-min.jpg", "3-compressor-25-min.jpg", "4-compressor-25-min.jpg", "5-compressor-25-min.jpg", "6-compressor-25-min.jpg", "7-compressor-25-min.jpg", "8-compressor-25-min.jpg", "9-compressor-25-min.jpg", "10-compressor-25-min.jpg", "11-compressor-25-min.jpg", "12-compressor-25-min.jpg", "13-compressor-25-min.jpg", "14-compressor-25-min.jpg", "15-compressor-25-min.jpg", "16-compressor-25-min.jpg", "17-compressor-25-min.jpg", "18-compressor-25-min.jpg", "19-compressor-25-min.jpg", "20-compressor-25-min.jpg", "21-compressor-25-min.jpg", "22-compressor-25-min.jpg", "23-compressor-25-min.jpg", "24-compressor-25-min.jpg", "25-compressor-25-min.jpg", "26-compressor-25-min.jpg", "27-compressor-25-min.jpg", "28-compressor-25-min.jpg", "29-compressor-25-min.jpg", "30-compressor-25-min.jpg", "31-compressor-25-min.jpg", "32-compressor-25-min.jpg", "33-compressor-25-min.jpg", "34-compressor-25-min.jpg", "35-compressor-25-min.jpg", "36-compressor-25-min.jpg", "37-compressor-25-min.jpg", "38-compressor-25-min.jpg", "39-compressor-25-min.jpg", "40-compressor-25-min.jpg", "41-compressor-25-min.jpg", "42-compressor-25-min.jpg", "43-compressor-25-min.jpg", "44-compressor-25-min.jpg", "45-compressor-25-min.jpg", "46-compressor-25-min.jpg", "47-compressor-25-min.jpg", "48-compressor-25-min.jpg", "49-compressor-25-min.jpg", "50-compressor-25-min.jpg", "51-compressor-25-min.jpg", "52-compressor-25-min.jpg", "53-compressor-25-min.jpg", "54-compressor-25-min.jpg", "55-compressor-25-min.jpg", "56-compressor-25-min.jpg", "57-compressor-25-min.jpg", "58-compressor-25-min.jpg", "59-compressor-25-min.jpg", "60-compressor-25-min.jpg", "61-compressor-25-min.jpg", "62-compressor-25-min.jpg", "63-compressor-25-min.jpg"]);
-
-
-
-$(window).load(function() {
-     $('#loading').hide();
-  });
