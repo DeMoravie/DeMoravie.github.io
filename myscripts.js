@@ -2,7 +2,7 @@
 var modal = document.getElementById('myModal');
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
-var imgX = document.getElementById('myImgX');
+
 var img1 = document.getElementById('myImg1');
 var img2 = document.getElementById('myImg2');
 var img3 = document.getElementById('myImg3');
@@ -70,13 +70,6 @@ var img63 = document.getElementById('myImg63');
 var modalImg = document.getElementById("modalImg");
 var captionText = document.getElementById("caption");
 
-imgX.onclick = function(){
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.title;
-	$("html").css({"overflow-y":"hidden"});
-}
-
 img1.onclick = function(){
     modal.style.display = "block";
     modalImg.src = "1.jpg";
@@ -86,7 +79,7 @@ img1.onclick = function(){
 
 img2.onclick = function(){
     modal.style.display = "block";
-    modalImg.src = this.src;
+    modalImg.src = "2.jpg";
     captionText.innerHTML = this.title;	
 	$("html").css({"overflow":"hidden"});
 }
