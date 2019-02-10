@@ -79,7 +79,7 @@ imgX.onclick = function(){
 
 img1.onclick = function(){
     modal.style.display = "block";
-    modalImg.src = this.src;
+    modalImg.src = "1.jpg";
     captionText.innerHTML = this.title;
 	$("html").css({"overflow-y":"hidden"});
 }
